@@ -1,0 +1,8 @@
+// HW 1   ^\w?[A-Z].*\.
+A tree was born in the forest, => false
+in the forest it grew. => false
+Winter and summer slim => false
+It was green. => true
+jkdjfQ
+
+
