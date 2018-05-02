@@ -3,7 +3,7 @@
 //public class SomeNumber {
 //    private int n = 0;
 //
-//    public static void main (String[] args) {
+//    public static void Main (String[] args) {
 //        int getN ();
 //        int setN ();
 //        print();

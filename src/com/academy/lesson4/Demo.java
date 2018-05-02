@@ -3,7 +3,7 @@
 //public class Demo {
 //    static String one = "one";
 //
-//    public static void main(String[] args) {
+//    public static void Main(String[] args) {
 //
 //        sayNumber(n);
 //        sayHello(n);
