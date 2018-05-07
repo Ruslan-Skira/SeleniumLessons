@@ -1,15 +1,18 @@
 package lesson11.time;
 
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
+
 public class TimeImpl implements Time {
     private int hour;
     private int minute;
     private int second;
 
 
-    public TimeImpl(int hour, int minute, int second) {
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
+    public TimeImpl(int hour, int minute, int second) throws TimeoutException {
+        setHour(hour);
+        setMinute(minute);
+        setSecond(second);
     }
 
     @Override
@@ -49,7 +52,7 @@ public class TimeImpl implements Time {
      * @param minute
      * @throws IllegalArgumentException not right format
      */
-    public void setMinute(int minute) {
+    public void setMinute(int minute){
         if(minute < 0 || minute > 59){
             throw new IllegalArgumentException("Not right format");
         }

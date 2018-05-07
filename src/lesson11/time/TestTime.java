@@ -1,5 +1,8 @@
 package lesson11.time;
 
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
+
 public class TestTime {
     public static void main(String[] args) {
         Time time1 = new TimeImpl(22, 34, 5);
@@ -25,10 +28,17 @@ public class TestTime {
         assert timeHours12RepresentActual.equals("10:34:05pm");
 // Testing minutes for the exeptions
         //((TimeImpl) time1).setMinute(232);
-        TimeImpl time3 = new TimeImpl(1,1,1);
-            time3.setMinute(59);
-            time3.setHour(23);
-            time3.setSecond(59);
+
+        TimeImpl time3 = new TimeImpl(1, 1, 1);
+        try {
+            TimeImpl time4 = new TimeImpl(1, 1, 1);
+        } catch (TimeoutException e) {
+            System.out.println(e.getMessage());
+        }
+        time3.setMinute(59);
+
+        time3.setHour(23);
+        time3.setSecond(59);
     }
 
 }
