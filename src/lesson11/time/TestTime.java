@@ -23,9 +23,12 @@ public class TestTime {
         assert timeSimpleRepresentActual.equals("22:34:05");
         assert timeHours24RepresentActual.equals("22:34:06");
         assert timeHours12RepresentActual.equals("10:34:05pm");
-
+// Testing minutes for the exeptions
         //((TimeImpl) time1).setMinute(232);
         TimeImpl time3 = new TimeImpl(1,1,1);
-            time3.setMinute(60);
+            time3.setMinute(59);
+            time3.setHour(23);
+            time3.setSecond(59);
     }
+
 }

@@ -32,8 +32,15 @@ public class TimeImpl implements Time {
                 return represent();
         }
     }
-
+    /**
+     *
+     * @param hour
+     * @throws IllegalArgumentException not right format of the hour
+     */
     public void setHour(int hour) {
+        if(hour < 0 || hour > 23){
+            throw new IllegalArgumentException("Hours not right format");
+        }
         this.hour = hour;
     }
 
@@ -51,8 +58,15 @@ public class TimeImpl implements Time {
 
 
 
-
+    /**
+     *
+     * @param second
+     * @throws IllegalArgumentException not right format
+     */
     public void setSecond(int second) {
+        if(second < 0 || second > 59){
+            throw new IllegalArgumentException(" Seconds Not right format");
+        }
         this.second = second;
     }
 }
